@@ -1,7 +1,7 @@
 const removeAll = () => {
-    localStorage.removeItem('books');
+  localStorage.removeItem('books');
 
-    location.reload();
+  location.reload();
 };
 
 export { removeAll };
