@@ -1,10 +1,8 @@
-import { books } from '../index.js';
+import books from './book.js';
 
 export default (e) => {
   const index = e.target.previousElementSibling.textContent.trim();
   const booksStored = JSON.parse(localStorage.getItem('books'));
-
-  console.log(index);
 
   books.list = booksStored;
   books.removeItem(+index);

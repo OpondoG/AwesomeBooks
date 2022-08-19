@@ -1,14 +1,7 @@
 import printLocalStorage from './printLocalStorage.js';
+import Book from './b.js';
 
-class Book {
-  constructor(title, author, index) {
-    this.title = title;
-    this.author = author;
-    this.index = index;
-  }
-}
-
-export default class Books {
+class Books {
   constructor() {
     this.list = [];
   }
@@ -38,3 +31,5 @@ export default class Books {
     printLocalStorage(this.list);
   }
 }
+
+export default new Books();

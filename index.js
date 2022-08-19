@@ -4,9 +4,6 @@ import addnewRow from './module/addNewRow.js';
 import removeAll from './module/removeAll.js';
 import printLocalStorage from './module/printLocalStorage.js';
 import { addForm, addListmenu, contact } from './module/desktopVersion.js';
-import Books from './module/book.js';
-
-export const books = new Books();
 
 const currentdate = DateTime.now().toRFC2822();
 document.querySelector('.date').innerHTML = currentdate;
@@ -18,8 +15,7 @@ document.getElementById('add').addEventListener('click', addnewRow);
 document.querySelector('.book-details').addEventListener('click', (e) => {
   const { target } = e;
 
-  if (!target.classList.contains('remove') || target.tagName !== 'BUTTON')
-    return;
+  if (!target.classList.contains('remove') || target.tagName !== 'BUTTON') return;
 
   deleteRow(e);
 });

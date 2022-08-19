@@ -1,4 +1,4 @@
-import { books } from '../index.js';
+import books from './book.js';
 
 export default () => {
   localStorage.removeItem('books');
