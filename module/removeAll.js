@@ -1,7 +1,9 @@
 const removeAll = () => {
   localStorage.removeItem('books');
-
-  window.location.reload();
+  /* eslint-disable */
+  location.reload();
+  /* eslint-enable */
 };
-
-export default { removeAll };
+/* eslint-disable */
+export { removeAll };
+/* eslint-enable */

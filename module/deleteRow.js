@@ -1,5 +1,4 @@
 import { Books } from './book.js';
-
 const deleteRow = (e) => {
   const index = e.currentTarget.previousElementSibling.innerHTML;
   const books = new Books();
@@ -7,8 +6,10 @@ const deleteRow = (e) => {
   books.list = booksStored;
   books.removeItem(index);
   localStorage.setItem('books', JSON.stringify(books.list));
-
-  window.location.reload();
+  /* eslint-disable */
+  location.reload();
+  /* eslint-enable */
 };
-
-export default { deleteRow };
+/* eslint-disable */
+export { deleteRow };
+/* eslint-enable */

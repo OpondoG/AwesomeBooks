@@ -1,28 +1,28 @@
-/* eslint max-classes-per-file: ["error", 2] */
+/* eslint-disable */
 export class Book {
-    constructor(title, author, index) {
-        this.title = title;
-        this.author = author;
-        this.index = index;
-    }
+  /* eslint-enable */
+  constructor(title, author, index) {
+    this.title = title;
+    this.author = author;
+    this.index = index;
+  }
 }
 
 export class Books {
-    constructor() {
-        this.list = [];
-    }
+  constructor() {
+    this.list = [];
+  }
 
-    add(title, author) {
-        if (Array.isArray(this.list)) {
-            this.list.push(new Book(title, author));
-        }
+  add(title, author) {
+    if (Array.isArray(this.list)) {
+      this.list.push(new Book(title, author));
     }
+  }
 
-    removeItem(index) {
-        if (Array.isArray(this.list)) {
-            const array = this.list;
-            array.splice(index, 1);
-        }
+  removeItem(index) {
+    if (Array.isArray(this.list)) {
+      const array = this.list;
+      array.splice(index, 1);
     }
+  }
 }
-export default { Books };
