@@ -1,7 +1,11 @@
-const removeAll = () => {
+import { books } from '../index.js';
+
+export default () => {
   localStorage.removeItem('books');
+  books.list = [];
+  books.display();
 
-  location.reload();
+  document.querySelector('.book-details *').remove();
+
+  document.querySelector('.list').click();
 };
-
-export { removeAll };

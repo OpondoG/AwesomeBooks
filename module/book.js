@@ -1,3 +1,5 @@
+import printLocalStorage from './printLocalStorage.js';
+
 class Book {
   constructor(title, author, index) {
     this.title = title;
@@ -6,7 +8,7 @@ class Book {
   }
 }
 
-export class Books {
+export default class Books {
   constructor() {
     this.list = [];
   }
@@ -15,6 +17,8 @@ export class Books {
     if (Array.isArray(this.list)) {
       this.list.push(new Book(title, author));
     }
+
+    this.display();
   }
 
   removeItem(index) {
@@ -22,5 +26,15 @@ export class Books {
       const array = this.list;
       array.splice(index, 1);
     }
+
+    this.display();
+  }
+
+  display() {
+    const list = document.querySelector('.book-details');
+
+    list.innerHTML = '';
+
+    printLocalStorage(this.list);
   }
 }

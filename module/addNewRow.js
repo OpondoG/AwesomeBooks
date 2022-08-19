@@ -1,21 +1,16 @@
-import { Books } from './book.js';
+import { books } from '../index.js';
 
-const addnewRow = () => {
-  const books = new Books();
+export default () => {
   const title = document.getElementById('title').value;
   const author = document.getElementById('author').value;
-  const storedBooksList = JSON.parse(localStorage.getItem('books'));
   books.add(title, author);
   if (localStorage.getItem('books') === null) {
     localStorage.setItem('books', JSON.stringify(books.list));
 
-    location.reload();
+    document.querySelector('.list').click();
   } else {
-    const newList = storedBooksList.concat(books.list);
-    localStorage.setItem('books', JSON.stringify(newList));
+    localStorage.setItem('books', JSON.stringify(books.list));
 
-    location.reload();
+    document.querySelector('.list').click();
   }
 };
-
-export { addnewRow };

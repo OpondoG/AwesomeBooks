@@ -1,14 +1,14 @@
-import { Books } from './book.js';
+import { books } from '../index.js';
 
-const deleteRow = (e) => {
-  const index = e.currentTarget.previousElementSibling.innerHTML;
-  const books = new Books();
+export default (e) => {
+  const index = e.target.previousElementSibling.textContent.trim();
   const booksStored = JSON.parse(localStorage.getItem('books'));
+
+  console.log(index);
+
   books.list = booksStored;
-  books.removeItem(index);
+  books.removeItem(+index);
   localStorage.setItem('books', JSON.stringify(books.list));
 
-  location.reload();
+  document.querySelector('.list').click();
 };
-
-export { deleteRow };

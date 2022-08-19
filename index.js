@@ -1,19 +1,27 @@
 import { DateTime } from './module/luxon.js';
-import { deleteRow } from './module/deleteRow.js';
-import { addnewRow } from './module/addNewRow.js';
-import { removeAll } from './module/removeAll.js';
-import { printLocalStorage } from './module/printLocalStorage.js';
+import deleteRow from './module/deleteRow.js';
+import addnewRow from './module/addNewRow.js';
+import removeAll from './module/removeAll.js';
+import printLocalStorage from './module/printLocalStorage.js';
 import { addForm, addListmenu, contact } from './module/desktopVersion.js';
+import Books from './module/book.js';
+
+export const books = new Books();
 
 const currentdate = DateTime.now().toRFC2822();
 document.querySelector('.date').innerHTML = currentdate;
 
-printLocalStorage();
+printLocalStorage(JSON.parse(localStorage.getItem('books')));
 
 document.getElementById('add').addEventListener('click', addnewRow);
 
-document.querySelectorAll('.remove').forEach((removeButton) => {
-  removeButton.addEventListener('click', deleteRow);
+document.querySelector('.book-details').addEventListener('click', (e) => {
+  const { target } = e;
+
+  if (!target.classList.contains('remove') || target.tagName !== 'BUTTON')
+    return;
+
+  deleteRow(e);
 });
 
 document.querySelector('#removeAll').addEventListener('click', removeAll);
