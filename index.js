@@ -17,7 +17,7 @@ document.getElementById('add').addEventListener('click', addnewRow);
 
 // DELETE THE CURRENT ROW OF THE DATDABASE.
 document.querySelectorAll('.remove').forEach((removeButton) => {
-    removeButton.addEventListener('click', deleteRow);
+  removeButton.addEventListener('click', deleteRow);
 });
 
 // REMOVING THE WHOLE LIST
