@@ -1,240 +1,240 @@
 // these aren't really private, but nor are they really useful to document
-/* eslint-disable */
+
 /**
  * @private
  */
 class LuxonError extends Error {}
 
 /**
-  * @private
-  */
+ * @private
+ */
 class InvalidDateTimeError extends LuxonError {
-  constructor(reason) {
-    super(`Invalid DateTime: ${reason.toMessage()}`);
-  }
+    constructor(reason) {
+        super(`Invalid DateTime: ${reason.toMessage()}`);
+    }
 }
 
 /**
-  * @private
-  */
+ * @private
+ */
 class InvalidIntervalError extends LuxonError {
-  constructor(reason) {
-    super(`Invalid Interval: ${reason.toMessage()}`);
-  }
+    constructor(reason) {
+        super(`Invalid Interval: ${reason.toMessage()}`);
+    }
 }
 
 /**
-  * @private
-  */
+ * @private
+ */
 class InvalidDurationError extends LuxonError {
-  constructor(reason) {
-    super(`Invalid Duration: ${reason.toMessage()}`);
-  }
+    constructor(reason) {
+        super(`Invalid Duration: ${reason.toMessage()}`);
+    }
 }
 
 /**
-  * @private
-  */
+ * @private
+ */
 class ConflictingSpecificationError extends LuxonError {}
 
 /**
-  * @private
-  */
+ * @private
+ */
 class InvalidUnitError extends LuxonError {
-  constructor(unit) {
-    super(`Invalid unit ${unit}`);
-  }
+    constructor(unit) {
+        super(`Invalid unit ${unit}`);
+    }
 }
 
 /**
-  * @private
-  */
+ * @private
+ */
 class InvalidArgumentError extends LuxonError {}
 
 /**
-  * @private
-  */
+ * @private
+ */
 class ZoneIsAbstractError extends LuxonError {
-  constructor() {
-    super('Zone is an abstract class');
-  }
+    constructor() {
+        super('Zone is an abstract class');
+    }
 }
 
 /**
-  * @private
-  */
+ * @private
+ */
 
 const n = 'numeric';
 const s = 'short';
 const l = 'long';
 
 const DATE_SHORT = {
-  year: n,
-  month: n,
-  day: n,
+    year: n,
+    month: n,
+    day: n,
 };
 
 const DATE_MED = {
-  year: n,
-  month: s,
-  day: n,
+    year: n,
+    month: s,
+    day: n,
 };
 
 const DATE_MED_WITH_WEEKDAY = {
-  year: n,
-  month: s,
-  day: n,
-  weekday: s,
+    year: n,
+    month: s,
+    day: n,
+    weekday: s,
 };
 
 const DATE_FULL = {
-  year: n,
-  month: l,
-  day: n,
+    year: n,
+    month: l,
+    day: n,
 };
 
 const DATE_HUGE = {
-  year: n,
-  month: l,
-  day: n,
-  weekday: l,
+    year: n,
+    month: l,
+    day: n,
+    weekday: l,
 };
 
 const TIME_SIMPLE = {
-  hour: n,
-  minute: n,
+    hour: n,
+    minute: n,
 };
 
 const TIME_WITH_SECONDS = {
-  hour: n,
-  minute: n,
-  second: n,
+    hour: n,
+    minute: n,
+    second: n,
 };
 
 const TIME_WITH_SHORT_OFFSET = {
-  hour: n,
-  minute: n,
-  second: n,
-  timeZoneName: s,
+    hour: n,
+    minute: n,
+    second: n,
+    timeZoneName: s,
 };
 
 const TIME_WITH_LONG_OFFSET = {
-  hour: n,
-  minute: n,
-  second: n,
-  timeZoneName: l,
+    hour: n,
+    minute: n,
+    second: n,
+    timeZoneName: l,
 };
 
 const TIME_24_SIMPLE = {
-  hour: n,
-  minute: n,
-  hourCycle: 'h23',
+    hour: n,
+    minute: n,
+    hourCycle: 'h23',
 };
 
 const TIME_24_WITH_SECONDS = {
-  hour: n,
-  minute: n,
-  second: n,
-  hourCycle: 'h23',
+    hour: n,
+    minute: n,
+    second: n,
+    hourCycle: 'h23',
 };
 
 const TIME_24_WITH_SHORT_OFFSET = {
-  hour: n,
-  minute: n,
-  second: n,
-  hourCycle: 'h23',
-  timeZoneName: s,
+    hour: n,
+    minute: n,
+    second: n,
+    hourCycle: 'h23',
+    timeZoneName: s,
 };
 
 const TIME_24_WITH_LONG_OFFSET = {
-  hour: n,
-  minute: n,
-  second: n,
-  hourCycle: 'h23',
-  timeZoneName: l,
+    hour: n,
+    minute: n,
+    second: n,
+    hourCycle: 'h23',
+    timeZoneName: l,
 };
 
 const DATETIME_SHORT = {
-  year: n,
-  month: n,
-  day: n,
-  hour: n,
-  minute: n,
+    year: n,
+    month: n,
+    day: n,
+    hour: n,
+    minute: n,
 };
 
 const DATETIME_SHORT_WITH_SECONDS = {
-  year: n,
-  month: n,
-  day: n,
-  hour: n,
-  minute: n,
-  second: n,
+    year: n,
+    month: n,
+    day: n,
+    hour: n,
+    minute: n,
+    second: n,
 };
 
 const DATETIME_MED = {
-  year: n,
-  month: s,
-  day: n,
-  hour: n,
-  minute: n,
+    year: n,
+    month: s,
+    day: n,
+    hour: n,
+    minute: n,
 };
 
 const DATETIME_MED_WITH_SECONDS = {
-  year: n,
-  month: s,
-  day: n,
-  hour: n,
-  minute: n,
-  second: n,
+    year: n,
+    month: s,
+    day: n,
+    hour: n,
+    minute: n,
+    second: n,
 };
 
 const DATETIME_MED_WITH_WEEKDAY = {
-  year: n,
-  month: s,
-  day: n,
-  weekday: s,
-  hour: n,
-  minute: n,
+    year: n,
+    month: s,
+    day: n,
+    weekday: s,
+    hour: n,
+    minute: n,
 };
 
 const DATETIME_FULL = {
-  year: n,
-  month: l,
-  day: n,
-  hour: n,
-  minute: n,
-  timeZoneName: s,
+    year: n,
+    month: l,
+    day: n,
+    hour: n,
+    minute: n,
+    timeZoneName: s,
 };
 
 const DATETIME_FULL_WITH_SECONDS = {
-  year: n,
-  month: l,
-  day: n,
-  hour: n,
-  minute: n,
-  second: n,
-  timeZoneName: s,
+    year: n,
+    month: l,
+    day: n,
+    hour: n,
+    minute: n,
+    second: n,
+    timeZoneName: s,
 };
 
 const DATETIME_HUGE = {
-  year: n,
-  month: l,
-  day: n,
-  weekday: l,
-  hour: n,
-  minute: n,
-  timeZoneName: l,
+    year: n,
+    month: l,
+    day: n,
+    weekday: l,
+    hour: n,
+    minute: n,
+    timeZoneName: l,
 };
 
 const DATETIME_HUGE_WITH_SECONDS = {
-  year: n,
-  month: l,
-  day: n,
-  weekday: l,
-  hour: n,
-  minute: n,
-  second: n,
-  timeZoneName: l,
+    year: n,
+    month: l,
+    day: n,
+    weekday: l,
+    hour: n,
+    minute: n,
+    second: n,
+    timeZoneName: l,
 };
 
 /*
@@ -244,89 +244,90 @@ const DATETIME_HUGE_WITH_SECONDS = {
  */
 
 /**
-  * @private
-  */
+ * @private
+ */
 
 // TYPES
 
 function isUndefined(o) {
-  return typeof o === 'undefined';
+    return typeof o === 'undefined';
 }
 
 function isNumber(o) {
-  return typeof o === 'number';
+    return typeof o === 'number';
 }
 
 function isInteger(o) {
-  return typeof o === 'number' && o % 1 === 0;
+    return typeof o === 'number' && o % 1 === 0;
 }
 
 function isString(o) {
-  return typeof o === 'string';
+    return typeof o === 'string';
 }
 
 function isDate(o) {
-  return Object.prototype.toString.call(o) === '[object Date]';
+    return Object.prototype.toString.call(o) === '[object Date]';
 }
 
 // CAPABILITIES
 
 function hasRelative() {
-  try {
-    return typeof Intl !== 'undefined' && !!Intl.RelativeTimeFormat;
-  } catch (e) {
-    return false;
-  }
+    try {
+        return typeof Intl !== 'undefined' && !!Intl.RelativeTimeFormat;
+    } catch (e) {
+        return false;
+    }
 }
 
 // OBJECTS AND ARRAYS
 
 function maybeArray(thing) {
-  return Array.isArray(thing) ? thing : [thing];
+    return Array.isArray(thing) ? thing : [thing];
 }
 
 function bestBy(arr, by, compare) {
-  if (arr.length === 0) {
-    return undefined;
-  }
-  return arr.reduce((best, next) => {
-    const pair = [by(next), next];
-    if (!best) {
-      return pair;
-    } if (compare(best[0], pair[0]) === best[0]) {
-      return best;
+    if (arr.length === 0) {
+        return undefined;
     }
-    return pair;
-  }, null)[1];
+    return arr.reduce((best, next) => {
+        const pair = [by(next), next];
+        if (!best) {
+            return pair;
+        }
+        if (compare(best[0], pair[0]) === best[0]) {
+            return best;
+        }
+        return pair;
+    }, null)[1];
 }
 
 function pick(obj, keys) {
-  return keys.reduce((a, k) => {
-    a[k] = obj[k];
-    return a;
-  }, {});
+    return keys.reduce((a, k) => {
+        a[k] = obj[k];
+        return a;
+    }, {});
 }
 
 function hasOwnProperty(obj, prop) {
-  return Object.prototype.hasOwnProperty.call(obj, prop);
+    return Object.prototype.hasOwnProperty.call(obj, prop);
 }
 
 // NUMBERS AND STRINGS
 
 function integerBetween(thing, bottom, top) {
-  return isInteger(thing) && thing >= bottom && thing <= top;
+    return isInteger(thing) && thing >= bottom && thing <= top;
 }
 
 // x % n but takes the sign of n instead of x
 function floorMod(x, n) {
-  return x - n * Math.floor(x / n);
+    return x - n * Math.floor(x / n);
 }
 
 function padStart(input, n = 2) {
-  const isNeg = input < 0;
-  let padded;
-  if (isNeg) {
-    padded = `-${(`${-input}`).padStart(n, '0')}`;
+    const isNeg = input < 0;
+    let padded;
+    if (isNeg) {
+        padded = `-${(`${-input}`).padStart(n, '0')}`;
   } else {
     padded = (`${input}`).padStart(n, '0');
   }

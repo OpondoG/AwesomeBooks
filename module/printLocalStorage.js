@@ -1,9 +1,9 @@
 const printLocalStorage = () => {
   if (localStorage.getItem('books') != null) {
     const storedBooksList = JSON.parse(localStorage.getItem('books'));
-    /* eslint-disable */
+    
     for (let i = 0; i < storedBooksList.length; i++) {
-      /* eslint-enable */
+      
       const book = document.createElement('ul');
       book.className = 'book-menu border-bottom';
       book.innerHTML = `<li class="book-name list-group-item">${storedBooksList[i].title}</li>
@@ -14,6 +14,6 @@ const printLocalStorage = () => {
     }
   }
 };
-/* eslint-disable */
+
 export { printLocalStorage };
-/* eslint-enable */
+
