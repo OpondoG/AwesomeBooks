@@ -7,10 +7,8 @@ const deleteRow = (e) => {
   books.list = booksStored;
   books.removeItem(index);
   localStorage.setItem('books', JSON.stringify(books.list));
-  /* eslint-disable */
-  location.reload();
-  /* eslint-enable */
+
+  window.location.reload();
 };
-/* eslint-disable */
-export { deleteRow };
-/* eslint-enable */
+
+export default { deleteRow };
