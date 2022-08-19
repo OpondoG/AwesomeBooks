@@ -3,7 +3,6 @@ const printLocalStorage = () => {
         const storedBooksList = JSON.parse(localStorage.getItem('books'));
 
         for (let i = 0; i < storedBooksList.length; i++) {
-
             const book = document.createElement('ul');
             book.className = 'book-menu border-bottom';
             book.innerHTML = `<li class="book-name list-group-item">${storedBooksList[i].title}</li>
